@@ -1,0 +1,127 @@
+<?php 
+	$link = mysqli_connect("localhost", "root", "","pixelpc");
+	
+	
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PIXEL PC</title>
+	<link rel="stylesheet" type="text/css" href="checkout.css">
+	<meta name="keyword" content=" personal computer, PC, Website, webpage, Abbod, Alwaal">
+	<meta name="description" content=" This website is Abbod Alwaal personal webpage">
+</head>
+
+<body>
+	<div id="Header">
+ 	<h1 id="logo"><a id="a" href="index.html"> PIXEL PC </a></h1>
+		<ul id="head">
+			<li id="headerinfo"><a id="a" href="items.html">OurCollection</a></li>
+			<li id="headerinfo"><a id="a" href="#C4">ContactUs</a></li>
+			<li id="headerinfo"><a id="a" href="index.html">SignOut</a></li>
+		</ul>
+
+		<a id="C1"></a>
+	</div>
+	<br><br><br><br><br><br>
+	<div id="BG">
+	<?php
+
+	session_start();
+	$sql = "SELECT * FROM op WHERE name ='" . $un . "'";
+	$res = mysqli_query($link,$sql);
+
+	if (mysqli_num_rows($res) > 0) {
+	    while($row = mysqli_fetch_array($res)) {
+	        ?>
+	        <table>
+	        	<tr>
+	        		<td><?php $row["img"]?></td>
+	        		<td><?php $row["op"]?></td>
+	        		<td><?php $row["cpu"]?></td>
+	        		<td><?php $row["ram"]?></td>
+	        		<td><?php $row["mb"]?></td>
+	        		<td><?php $row["price"]?></td>
+	        	</tr>
+	        </table>
+	        <?php
+	    }
+	} else {
+	    echo "<p>You dont have any item.</p>";
+	}
+	mysqli_close($link);
+?>   
+    <br><br><br><br><br><br>
+        <progress value="95.00" max="100"></progress>
+		
+		<form method="post" action="">
+        <?php
+			$res = mysqli_query($link, "SELECT * FROM pc");
+			echo "<select>";
+			while ($row= mysqli_fetch_array($res))
+			{
+				echo "<option>"; echo  $row["name"]." (".$row["price"] .") $"; echo "</option>";		
+			}echo "</select>";
+		?>
+		</form>
+        
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <hr>
+        
+    <div>
+    </div>
+         <input id="Total"  type="text" name="Total" value=""><span>Total</span>
+    <br>
+    
+            <input onclick="myRemoval()" id="i1" type="radio" name="money" value"Cash" checked><span>Cash</span>
+        
+            <input  onclick="myFunction()" id="i1" type="radio" name="money" value"CreditCard" ><span>CrediCard</span>
+            <table><tr>
+            <input id="show" style="display:none" type="text" name="Card Number" value="Card Number"></tr>
+        <tr>
+            <td><input id="show1" style="display:none" type="date" name="MM / YYYY" value="MM / YYYY"></td></tr>
+                <tr>
+            <td><input id="show2" style="display:none" type="text" name="CVC" value="CVC"></td>
+            
+        </tr></table>
+            <br><br><br>
+        
+    
+            <button onclick="slamMF()" type="button">Proceed</button>
+    </div>
+            <script>
+                                
+            function myFunction(){ 
+                                  document.getElementById("show").style.display='block'; 
+                                  document.getElementById("show1").style.display='inline';   
+                                  document.getElementById("show2").style.display='inline';
+            }
+                
+            function myRemoval(){ 
+                                document.getElementById("show").style.display='none';
+                                document.getElementById("show1").style.display='none'; 
+                                document.getElementById("show2").style.display='none';
+            }
+              
+            </script>
+    
+    
+    
+    
+    </div>
+
+	<div id="Footer">
+		<h1 style="color: #fff; text-align: left">Contact Us</h1>
+		<hr/>		
+		<br><br>	
+		<a style ="font-size:35px" href="https://cheetoss101.github.io/PersonalWeb.github.io/">Abbod Alwaal </a>
+		
+		<a style ="font-size:35px" href="https://sronova.github.io">Abdulrhman Saraweq </a>	
+	</div>
+</body>
+
+</html>
