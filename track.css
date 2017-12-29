@@ -1,0 +1,129 @@
+body{
+	margin: 0px;
+	background-image: url(images/1.jpg);
+}
+
+
+#logo{
+	margin: 5px;
+	position: absolute;
+	color: #fff;
+}
+
+#Header{
+	width: 100%; 
+	height: 50px; 
+	background-color: #222; 
+	top: 0; 
+	position: fixed;
+	z-index: 10;
+}
+
+#head{
+	text-align: center;
+}
+
+#headerinfo{
+	list-style-type: none; 
+	display: inline-block;
+	margin-left: 0px;
+    font-size:28px;
+    padding-right:100px;
+    padding-left:100px;
+}
+#headerpic{
+    list-style-type: none; 
+	display: inline-block;
+	margin-left: 0px;
+    font-size:28px;
+    padding-right:0px;
+    padding-left:0px;
+}
+
+a{
+	text-decoration: none; 
+	padding: 40px; 
+	font-family: sans-serif;
+	color: #ed1c24;
+}
+
+
+
+#title{
+	margin: 0px; 
+	padding: 0px; 
+	position: absolute; 
+	left: 50%; 
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%); 
+	text-align: center; 
+	color: #fff;
+	font-size: 50px; 
+	font-family: cursive;
+}
+
+p{
+	margin-left: 30px;
+    font-size: 30px;
+    color: azure;
+    
+
+}
+
+li{
+	margin-left: 30px;
+	font-family: optima;
+}
+
+#H1color{
+	color: #fff;
+	background-color: #222;
+	padding: 10px;
+ 	margin: 0px
+}
+
+#BG{
+	width: 75%; 
+	height: 1000px;
+	background-color: black;
+	display: block; 
+	margin: 1px auto;
+}
+
+
+#Footer{
+	width: 100%; 
+	height: 200px; 
+	background-color: #222; 
+	bottom: 0; 
+	margin: 0px;
+	text-align: center;
+}
+
+h2{
+	margin: 5px
+}
+.ii{
+    margin: 40px;
+    display: inline;
+}
+button{
+    margin-left: 30px;
+    font-family: optima;
+    font-size: 25px;
+    
+}
+input{
+    margin-left: 30px;
+    font-family: optima;
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
